@@ -1,0 +1,835 @@
+@CHARSET "ISO-8859-1";
+
+html, body {
+	/*For sticking Footer to bottom of page*/
+	height: 100%;
+}
+/*Sticky Footer: Opera Fix*/
+body:before {
+	content:"";
+	height:100%;
+	float:left;
+	width:0;
+	margin-top:-32767px;
+}
+body {
+	margin: 0;
+	padding: 0;
+	color: #000000; /*black*/
+	font-family: Arial, sans-serif;
+	font-size: 1.0em;
+	
+	
+		/*background-color: #112360;*/ /*blue #1e3583*/
+}
+
+h3 {
+	font-weight: bold;
+	font-size: 1.25em;
+	line-height: 2em;
+	color: #e68002; /*orange*/
+	padding-left: 3px;
+}
+h3.blackHead {
+	color: #000000; /*black*/
+}
+h3.blackHeadCenter {
+	color: #000000; /*black*/
+	text-align: center;
+	line-height: 1em;
+}
+h2 {
+	font-weight: bold;
+	font-size: 1.15em;
+	line-height: 2em;
+	color: #ffffff;
+	padding-left: 3px;
+} 
+
+p {
+	padding: 5px;
+}
+
+/*=================GENERAL LINKS=================*/
+a:link {
+	text-decoration: none;
+	color: #e68002;	/*orange*/
+	outline: 0;
+}
+a:visited {
+	color: #e68002;
+}
+a:hover {
+	color: #01793b;	/*green*/
+}
+
+button, input {
+	/* Get rid of dotted line on clicking*/
+	outline: 0;
+}
+
+fieldset {
+	width: 80%;
+	border: 2px solid #33cccc; /*aqua*/
+	color: #33cccc; /*aqua*/
+	margin: 0 auto; /*center*/	
+	
+	/*Rounded Corners*/
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;	
+}
+
+label{
+    display: inline-block;
+    float: left;
+    clear: left;
+    /*width: 125px;*/
+    text-align: right;
+}
+input {
+	display: inline-block;
+	float: left;
+	margin-bottom: 5px;
+	width: 150px;
+}
+
+
+/*==================WRAPPER===================*/
+#wrapper {
+	width: 100%;
+	min-width: 925px; /*Header wraps at less*/
+	margin: 0 auto; /*center*/
+	background-color: #112360; /*blue #1e3583*/
+
+	/*For sticking Footer to bottom of page*/
+	min-height: 100%;
+	
+		/*Min-height hack for IE6*/
+		height: auto !important;
+		height: 100%; /*wouldn't work with just 'min-height'*/
+		
+	margin-bottom: -32px; /*height of footer + footer border ht*/
+/*border: 1px solid orange;*/
+}
+
+
+/*==================HEADER AREA===================*/
+#header {
+	background: #339999 url('../images/multibar.png') repeat-x;
+	height: 160px;
+	border-bottom: 2px solid #e68002; /*orange*/
+}
+
+#logoImg {
+	float: left;
+	margin-top: 10px;
+		/*position: absolute;
+		left: 137px;*/
+
+}
+/*Reality U Header*/
+#headerText {
+	position: absolute;
+	padding-top: 50px;
+}
+/*Reality U Logo*/
+#logoImg2 {
+	position: absolute;
+	padding-top: 40px;
+	padding-left: 610px;
+}
+
+/*==================NAVIGATION===================*/
+
+#nav {
+	position: relative;
+	top: 15px;
+	float: right;
+ 		/*Items will wrap at lower width than min-width on #wrapper*/
+		/*width: 475px;*/
+		/*height: 30px;*/
+
+/*border: 1px solid red;*/
+}
+
+#nav ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}	
+#nav ul li {
+	display: inline;
+	/*Spacing between each link*/
+	padding-right: 20px;
+
+	/*REQUIRED FOR SUBMENU POSITIONING*/
+	position: relative;
+	/*REQUIRED FOR SUBMENU POSITIONING*/
+	float: left;
+
+/*border: 1px solid yellow;*/
+}
+
+#nav a {
+	display: block;
+	/*width: 100px;*/
+	/*height: 25px;*/
+	text-decoration: none;
+	font-size: 12px; /*use exact size to fit buttons*/
+	text-align: center;
+	margin-top: -5px;
+	/*Center text vertically*/
+	line-height: 22px;
+
+/*border: 1px solid red;*/
+}
+#nav a:link, #nav a:visited {
+	color: #ffffff; /*white*/
+	border-bottom: 10px solid transparent; /*or #339999 same color as background so doesn't show*/
+}
+#nav a:hover {
+	color: #ffffff;
+	border-bottom: 10px solid #1e3583;
+}
+
+
+
+
+/*==================MAIN CONTENT AREA===================*/
+#main {
+	/* Padding between main content and footer*/
+	padding-bottom: 10px;	
+	/*Let height auto size, don't need to specify*/
+}
+
+/*==================HOME/INDEX PAGE===================*/
+#loginArea {
+
+	width: 80%;
+	margin: 0 auto; /*center*/	
+	
+	/*border: 1px solid red;*/
+}
+
+#loginArea table {
+	width: 100%;
+	margin: 0 auto; /*center*/	
+}
+
+td {
+	vertical-align: top;
+	width: 33%;
+}
+
+#box1, #box2, #box3 {
+	/*For aligning buttons to bottom of box*/
+	position: relative;
+
+	/* IE8 FIX:
+	NOTE: if change height, must change shadow backgrd image
+	height of actual image file to be the same height for <IE8 fix.
+	class=addPad on jsp on Form element adds padding back 
+	cuz must take away from box due to border shows where padding was*/
+	height: 210px;
+	padding: 5px;
+	width: 80%;
+	
+	/*Rounded Corners*/
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	
+	background-image: url('../images/gradientshadow210.png');
+	background-repeat: no-repeat;
+	background-position: center;
+		
+	/*BACKGROUND SIZE IMAGE FIX FOR OLDER IE <8*/
+	/*Cover(height-max, larger) or Contain(width-max): both keep aspect ratio of image*/
+        -webkit-background-size: 100% 100%;
+        -moz-background-size: 100% 100%;
+        -o-background-size: 100% 100%;
+        background-size: 100% 100%;	
+		/*background-size: cover;  - change all to "cover" if want that*/	
+		
+/*		
+filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/gradientshadow.png',sizingMethod='scale');
+-ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/gradientshadow.png',sizingMethod='scale')";
+*/	
+}
+
+#box1 {
+	border-top: 10px solid #33cccc; /*aqua*/
+	background-color: #e68002; /*orange*/
+}
+#box2 {
+	border-top: 10px solid #1e3583; /*blue*/
+	background-color: #33cccc; /*aqua*/
+
+}
+#box3 {
+	border-top: 10px solid #e68002; /*orange*/
+	background-color: #3b68ff; /*lt blue*/
+	/*background-color: #01793b;*/ /*green*/
+}
+
+/*Registration Box Paragraph Text*/
+#regisBoxText {
+	padding: 0;
+	margin-bottom: -20px;
+	font-size: 13px;
+	line-height: 14px;
+}
+
+/*To align all student & admin labels & input boxes*/
+.studentInputs input, .adminInputs input {
+	font-size: 14px;
+	height: 14px;
+}
+.studentInputs label {
+	width: 140px;
+	font-size: 14px;
+	text-align: left;
+}
+.adminInputs label {
+	width: 65px;
+	font-size: 14px;
+	text-align: left;
+}
+
+/*Align buttons to bottom of box*/
+.bottomAlign, .bottomAlign2, .bottomAlign3 {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 25px;
+	padding-top: 5px;
+}
+/*Diff color border*/
+.bottomAlign {
+	border-top: 1px outset #e68002;
+}
+/*Diff color border*/
+.bottomAlign2 {
+	border-top: 1px outset #33cccc;
+}
+/*Diff color border - Register Button*/
+.bottomAlign3 {
+	border-top: 1px outset #1e3583;
+}
+
+#regButton {
+
+	display: inline-block;
+
+	background-color: transparent;
+	border: 0;
+	color: #ffffff;
+	text-align: right;
+	width: 100%;
+	font-size: 16px;
+
+}
+.submit {
+
+	background-color: transparent;
+	border: 0;
+	color: #ffffff;
+	text-align: right;
+	width: 100%;
+	font-size: 16px;
+	
+/*border: 1px solid red;*/
+}
+
+
+
+
+/*==================ADMIN HOME PAGE===================*/
+#mainArea {
+
+	width: 100%;
+	margin: 0 auto; /*center*/	
+	
+/*border: 1px solid yellow;*/
+}
+
+#mainArea table {
+	width: 80%;
+	margin: 0 auto; /*center*/	
+}
+
+#mainArea td {
+	vertical-align: top;
+	width: 25%;
+}
+
+#mainArea #box1, #mainArea #box2, #mainArea #box3, #mainArea #box4 {
+	/*For aligning buttons to bottom of box*/
+	position: relative;
+
+	/* IE8 FIX:
+	NOTE: if change height, must change shadow backgrd image
+	height of actual image file to be the same height for <IE8 fix.
+	class=addPad on jsp on <h3> element adds padding back 
+	cuz must take away from box due to border shows where padding was*/
+	height: 300px;
+	padding: 5px;
+	width: 80%;
+	
+	/*Rounded Corners*/
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	
+	background-image: url('../images/gradientshadow300.png');
+	background-repeat: no-repeat;
+	background-position: center;
+	
+	/*BACKGROUND SIZE IMAGE FIX FOR OLDER IE <8*/
+	/*Cover(height-max, larger) or Contain(width-max): both keep aspect ratio of image*/
+        -webkit-background-size: 100% 100%;
+        -moz-background-size: 100% 100%;
+        -o-background-size: 100% 100%;
+        background-size: 100% 100%;	
+		/*background-size: cover;  - change all to "cover" if want that*/	
+		
+/*		
+filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/gradientshadow.png',sizingMethod='scale');
+-ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/gradientshadow.png',sizingMethod='scale')";
+*/
+				
+}
+
+#mainArea #box1 {
+	border-top: 10px solid #33cccc; /*aqua*/
+	background-color: #e68002; /*orange*/
+}
+#mainArea #box2 {
+	border-top: 10px solid #1e3583; /*blue*/
+	background-color: #33cccc; /*aqua*/
+
+}
+#mainArea #box3 {
+	border-top: 10px solid #e68002; /*orange*/
+	background-color: #01793b; /*green*/
+}
+#mainArea #box4 {
+	border-top: 10px solid #01793b; /*green*/
+	background-color: #3b68ff; /*lt blue*/
+	/*#ca0026 red*/
+}
+
+.icon {
+	position: absolute; /*Keep img same horiz when header goes to 2 lines*/
+	top: 60px; /*Keep img same horiz when header goes to 2 lines*/
+	width: 100%;
+	text-align: center; 
+}
+
+
+/*Align buttons to bottom of box*/
+#mainArea .bottomAlign, #mainArea .bottomAlign2, #mainArea .bottomAlign3, #mainArea .bottomAlign4 {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 50px;
+	padding-top: 10px;
+}
+/*Diff color border*/
+#mainArea .bottomAlign {
+	border-top: 1px outset #e68002;
+}
+/*Diff color border*/
+#mainArea .bottomAlign2 {
+	border-top: 1px outset #33cccc;
+}
+/*Diff color border*/
+#mainArea .bottomAlign3 {
+	border-top: 1px outset #01793b;
+}
+/*Diff color border*/
+#mainArea .bottomAlign4 {
+	border-top: 1px outset #1e3583;
+}
+
+#adminButton {
+
+	display: inline-block;
+
+	background-color: transparent;
+	border: 0;
+	color: #ffffff;
+	text-align: right;
+	width: 100%;
+	font-size: 16px;
+
+/*border: 1px solid red;*/
+}
+
+
+
+
+/*==================SURVEY PAGE & NEW GROUP PAGE===================*/
+/*==================& REGISTRATION PAGE & OPEN GROUP PAGE --> uses 'newGroupForm' id===========*/
+
+/*Survey Page - Event Date: Text only shows on print for Student Surveys*/
+.eventDate {
+	display: none;
+}
+/*Survey Page - Event Date: Text shows screen & print for Processed Surveys*/
+.eventDateShow {
+	color: #33cccc;  /*#1e3583; orange*/
+	font-weight: normal;
+	font-size: 0.75em;
+}
+
+#surveyForm label, #newGroupForm label {
+    display: inline-block;
+    float: left;
+    clear: left;
+    width: 210px;
+    text-align: right;
+	padding-right: 5px;
+	line-height: 1.25em;
+}
+#surveyForm input, #surveyForm select, #newGroupForm input, #newGroupForm select {
+	display: inline-block;
+	float: left;
+	margin-bottom: 5px;
+	width: 225px;
+	line-height: 1.25em;
+	color: #ffffff;
+	background-color: transparent;
+	border: 0;
+	border-bottom: 2px dotted #33cccc;
+
+}
+
+#surveyForm option, #newGroupForm option {
+	color: #ffffff;
+	background-color: #e68002;
+}
+
+#surveyForm div {
+	font-size: .90em;
+	line-height: 1.25em;
+}
+/*Larger Bottom Padding for New Group Page*/
+#newGroupForm div {
+	font-size: .90em;
+	line-height: 1.25em;
+	padding-bottom: 50px;
+}
+
+/*RADIO BUTTONS*/
+#surveyForm div.radioInput input {
+	/*Size of radio button circle*/
+	width: 25px;
+	border: 0;
+	outline: 0;
+}
+#surveyForm div.radioInput, #surveyForm div.radioInput div {
+	display: inline-block;
+	/*height: 25px;*/
+}
+
+/*INLINE ALIGNMENT OF PAIRED FIELDS*/
+#surveyForm  div.sameLine, #newGroupForm  div.sameLine {
+	float: left;
+}
+#surveyForm  div.clearFloat {
+	clear: both;
+}
+
+/*SURVEY 'SPENDING SECTION' DIFFERENT FORMATTING*/
+#spendingSection label {
+	/*Wider Label*/
+	width: 300px;
+}
+#spendingSection div {
+	/*More padding between each field*/
+	padding-bottom: 5px;
+}
+
+/*FORM BUTTONS*/
+#surveyForm #formButtonsContainer, #newGroupForm #formButtonsContainer {
+	margin: 0 auto;
+	width: 80%;		
+}
+#surveyForm #formButtons {
+	width: 450px; /*3 buttons width Survey Page*/
+	margin: 0 auto;
+}
+#newGroupForm #formButtons {
+	width: 300px; /*2 buttons width New Group Page*/
+	margin: 0 auto;	
+}
+#surveyForm #submit, #surveyForm #clear, #surveyForm #print, #newGroupForm #submit, #newGroupForm #clear {
+	width: 150px;
+	font-size: 16px;
+	color: #ffffff;
+	background-color: transparent;
+	border: 0;
+	border-bottom: 5px solid #e68002;
+
+}
+#surveyForm #clear, #newGroupForm #clear {
+	border-bottom: 5px solid #01793b;	
+}
+#surveyForm #print {
+	border-bottom: 5px solid #3b68ff;	
+}
+#surveyForm #submit:hover, #surveyForm #clear:hover, #surveyForm #print:hover, #newGroupForm #submit:hover, #newGroupForm #clear:hover {
+	color: #33cccc;
+	border-bottom: 5px solid #33cccc;	
+}
+
+/*==================ADDITIONAL REGISTRATION & NEW GROUP PAGE STYLES===================*/
+/*Format Error Msg When Have to Re-enter Form Data*/
+.inputErrorMsg {
+	color: #e68002;
+	margin-left: 80px;
+	margin-bottom: -25px;	
+	border: 1px solid #33cccc;
+}
+
+
+/*==================ADDITIONAL NEW GROUP PAGE (& THIS MSG USED IN OTHER PAGES TOO) STYLES===================*/
+/*Format Msg Heading*/
+#newGroupMsg {
+	margin-left: 80px;
+	margin-top: -10px;
+	margin-bottom: 5px;	
+}
+
+
+/*==================ADDITIONAL OPEN GROUP PAGE STYLES===================*/
+/*ADDL STYLES TO #newGroupMsg Heading FOR THIS PAGE*/
+.smallerMsg {
+	padding-top: 10px;
+	padding-bottom: 10px;
+	line-height: 1em;
+	font-size: 1em; 
+}
+
+/*OPEN GROUP PAGE - 'OPEN GROUP' BUTTON*/
+.leftPadding {
+	padding-left: 125px;
+}
+/*SPLIT MAIN FIELDSET INTO 2 EQUAL COLS*/
+table#openGroupTable {
+	width: 100%;	
+}
+#openGroupTable td {
+	vertical-align: top;
+	width: 50%;
+/*border: 1px solid yellow;*/
+}
+#openGroupTable label {
+	width: 150px;
+}
+
+/*OPEN GROUP PAGE - STUDENT SURVEY FIELDSET BOX*/
+fieldset#processBtnsBox {
+	width: 95%;
+	height: 50px;
+	margin-top: 10px;
+	padding-top: 10px;
+}
+fieldset#groupSurveyBox {
+	width: 95%;
+	height: 400px;
+	/*Will scroll large amount of Student Surveys*/
+	overflow: auto;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+/*FORM BUTTONS - OPEN GROUP --> STUDENT SURVEY FUNCTIONS*/
+#grpSurveyForm #formButtonsContainer {
+	float: right;
+	padding-right: 5px;
+	margin-top: -20px;
+}
+
+#grpSurveyForm #formButtons {
+	width: 250px; /*~4 buttons width Survey Page*/
+}
+#grpSurveyForm #view, #grpSurveyForm #print, #grpSurveyForm #delete, #grpSurveyForm #processed {
+	width: 60px;
+	font-size: 12px;
+	color: #ffffff;
+	background-color: transparent;
+	border: 0;
+	border-bottom: 5px solid #e68002;	
+	/*TO WRAP THE BUTTON WORDS*/
+	/*word-wrap: break-word;*/
+}
+#grpSurveyForm #print {
+	border-bottom: 5px solid #01793b;	
+}
+#grpSurveyForm #delete {
+	border-bottom: 5px solid #3b68ff;	
+}
+#grpSurveyForm #processed {
+	border-bottom: 5px solid #33cccc;	
+}
+#grpSurveyForm #view:hover, #grpSurveyForm #print:hover, #grpSurveyForm #delete:hover, #grpSurveyForm #processed:hover {
+	color: #33cccc;
+	border-bottom: 5px solid #33cccc;	
+}
+
+
+
+
+
+
+/*==================OCCUPATIONS PAGE STYLES===================*/
+#manageOccupsForm fieldset {
+	width: 95%;
+	height: 600px;
+	overflow: auto;
+}
+#manageOccupsForm table {
+	width: 95%;
+	margin: 0 auto; /*center*/
+	font-size: 11px;
+}
+#manageOccupsForm th {
+	color: #e68002;
+	font-weight: bold;
+}
+#manageOccupsForm td {
+	/*  Reset generic td width previously set to 33%  */
+	width: auto;
+	padding-left: 2px;
+	border-right: 1px solid #e68002;
+}
+
+/*FORM BUTTONS FOR EDIT/DELETE ON EACH ROW*/
+#manageOccupsForm .edit, #manageOccupsForm .delete {
+	margin-bottom: 5px;
+	width: 50px;
+	font-size: 11px;
+	color: #ffffff;
+	background-color: transparent;
+	border: 0;
+	border-bottom: 2px solid #e68002;
+}
+#manageOccupsForm .delete {
+	border-bottom: 2px solid #01793b;	
+}
+#manageOccupsForm .edit:hover, #manageOccupsForm .delete:hover {
+	color: #33cccc;
+	border-bottom: 2px solid #33cccc;	
+}
+
+/*FORM BUTTON AT BOTTOM*/
+#manageOccupsForm #formButtonsContainer {
+	margin: 0 auto;
+	width: 80%;		
+}
+#manageOccupsForm #formButtons {
+	width: 150px; /*make 300px for 2 buttons, etc.*/
+	margin: 0 auto;	
+}
+#manageOccupsForm #submit {
+	display: inline-block;
+	float: left;
+	margin-bottom: 5px;
+	width: 150px;
+	font-size: 16px;
+	color: #ffffff;
+	background-color: transparent;
+	border: 0;
+	border-bottom: 5px solid #e68002;
+}
+#manageOccupsForm #submit:hover {
+	color: #33cccc;
+	border-bottom: 5px solid #33cccc;	
+}
+
+
+/*==================EDITOCCUPS PAGE STYLES===================*/
+/*==================Uses 'newGroupForm' form id===================*/
+.insetFieldset {
+	width: 75%;
+	font-size: 12px;
+	color: white;
+	margin-bottom: 15px;
+}
+
+
+
+
+
+/*==================FOOTER AREA===================*/
+
+/*Spacer for Sticky Footer*/
+#push {
+	height: 32px;
+}
+
+#footer {
+	clear: both;
+	background-color: #339999; /*aqua-gray*/
+	width: 100%;
+	
+	border-top: 7px solid #e68002; /*orange*/
+	/*Have to set explicit height for Sticky Footer*/
+	height: 25px;
+
+}
+
+
+.legal {
+	color: #ffffff;
+	/*For Sticky Footer: use px so doesn't enlarge
+	and change footer height*/
+	font-size: 11px; 
+}
+
+
+/*==================MISCELLANEOUS===================*/
+img {
+	border: none;
+}
+
+.boldText {
+	font-weight: bold;
+}
+
+.boldTeal {
+	color: #006699;
+	font-weight: bold;
+}
+
+.boldGreen {
+	color: #01793b;
+	font-weight: bold;
+}
+
+.legal2 {
+	color: #000000;
+	font-size: 0.75em; 
+}
+
+/*Used for formatting Invalid Login/Student Access Error Page Msgs*/
+.msgSpacing {
+	padding: 10px;
+	line-height: 1em;
+}
+
+/*Used for formatting Help Pages*/
+.helpFormat {
+	color: #ffffff;
+	font-weight: bold;
+}
+
+.horizPadding {
+	padding-left: 75px;
+	padding-right: 75px;	
+}

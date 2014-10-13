@@ -1,0 +1,60 @@
+@CHARSET "ISO-8859-1";
+
+body { 
+        width: 600px; /*600px = ~8.5 inches for print page width*/
+		background-color: #ffffff; /*white*/
+}
+
+#wrapper { 
+		background-color: #ffffff; /*white*/
+}
+
+
+/*
+@media print
+{  
+*/
+
+/*========PUT CLASS ON ALL ELEMENTS TO EXCLUDE FROM PRINTING=========*/
+    .noprint, .noprint *
+    {
+        display: none !important;
+    }
+/*
+}
+*/
+
+
+
+
+/*==================HEADER AREA===================*/
+#header {
+	/*Delete background image/color*/
+	background: none;
+	/*Change border from 2px to 1px*/
+	border-bottom: 1px solid #e68002; /*orange*/
+}
+
+/*Event Date Text only shows on print*/
+.eventDate {
+	display: inline;
+	color: #1e3583; /*orange*/
+	font-weight: normal;
+	font-size: 0.75em;
+}
+
+
+/*==================FORM FIELD VALUES DISPLAY===================*/
+input, select, option {
+	color: #000000 !important; /*was white, make black*/
+}
+
+
+
+
+/*==================FOOTER AREA===================*/
+#footer {
+	background-color: #ffffff;
+	color: #000000;
+	border: none;
+}

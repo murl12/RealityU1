@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+
+<title>Communities In Schools - Reality U Admin Help</title>
+<meta charset="utf-8">
+<!--Edge = render site in highest standards mode possible 8, 9..., chrome = use Google engine if installed-->
+
+<meta http-equiv="pragma" content="no-cache">
+
+<link rel="stylesheet" href="css/reset.css" media="screen">
+<link rel="stylesheet" href="css/mainstyles.css" media="screen">
+
+<!--FOR STICKY FOOTER IN OLDER IE BROWSERS (except IE 7 OK)-->
+<!--[if (lt IE 9) & (!(IE 7))]>
+	<style type="text/css">
+		#wrapper {display:table; height:100%;}
+	</style>
+<![endif]-->
+
+
+<!-- REFRESH PARENT PAGE WHEN THIS ONE CLOSED -->
+<script type="text/javascript">
+	window.onunload = refreshParent;
+    function refreshParent() {
+        window.opener.location.reload();
+    }
+
+</script>
+
+
+</head>
+
+<body>
+<div id="wrapper">
+ 
+<!--HEADER-->
+<div id="header">
+
+<img id="logoImg" src="images/cislogo.png" width="200" height="150" alt="Communities In Schools Logo">
+
+
+<!--Header Text-->
+<img id="headerText" src="images/realityuhead.png" width="600" height="80" alt="Reality University Program">
+<!--REALITY U LOGO-->
+<img id="logoImg2" src="images/realityulogo.png" width="100" height="95" alt="Reality U Logo">
+
+<!--NAVIGATION-->
+<div id="nav">
+  <ul>
+  	<li><a href="index.jsp">Home</a></li>	
+	<li><a href="adminhome.jsp">Admin Home</a></li>
+	<li><a href="newgroup.jsp">New Group</a></li>
+    <li><a href="opengroup.jsp">Open Group</a></li>
+	<li><a href="occupations.jsp">Edit Occupations</a></li>
+    <li><a href="helpadmin.html">Help</a></li>
+  </ul>
+</div><!--END NAVIGATION-->
+
+
+</div><!--END HEADER-->
+
+
+
+
+<!--MAIN CONTENT CONTAINER -->
+<div id="main">
+
+<br><br>
+
+<fieldset>
+<h3>Administration - Help</h3>
+</fieldset>
+
+
+
+<br><br>
+
+<div id="mainArea">
+
+<fieldset>
+<p><span class="helpFormat">Question: </span>How do you create a New Group (<a href="newgroup.jsp">New Group Link</a>)?</p>
+<br>
+<p><span class="helpFormat">Answer: </span>Login as Admin and it will take you to the Admin Home page. 
+Click the "New Group" button and fill in the information with a unique group name.
+After you click 'Submit,' you will get a confirmation message with a randomly generated (unique) "Student Access Code" for 
+that group. Give this Student Access Code to the teacher(s) for that Group, and have them distribute it to their students. 
+All students for that Group will use the same Student Access Code (each Group will have their own individual access code).
+The students will use this Student Access Code to access the survey with their 'Last Name' and 'Date Of Birth'.
+</p>
+<br>
+</fieldset>
+<br>
+
+
+<fieldset>
+<p><span class="helpFormat">Question: </span>How do you View or Edit a Group (<a href="opengroup.jsp">Open Group Link</a>)?</p>
+<br>
+<p><span class="helpFormat">Answer: </span>When you click the "Open Group" button on the Admin Home page, it will take you to the 
+'Open Group' page. Here is where you can select a specific Group and click the "Open Group" button to View and Edit the information 
+for this Group. Click the "Edit Group" button to save changes, such as needing to change the Event Date, or other information. 
+</p>
+<br>
+</fieldset>
+<br>
+
+<fieldset>
+<p><span class="helpFormat">Question: </span>How do you View and Manage Surveys for a Group (<a href="opengroup.jsp">Open Group Link</a>)?</p>
+<br>
+<p><span class="helpFormat">Answer: </span>When you click the "Open Group" button on the 'Open Group' page, it will show a list of all the 
+student surveys in that group. Click the "View/Edit" button next to a survey, and it will open the survey for that student in a separate window, 
+where you can add the 'GPA' or edit any other information for that student. In this separate window at the bottom, you can click the "Edit Survey" 
+button to submit changes, "Print Survey" to print the survey, or "Delete Survey" to delete the survey.</p>
+<p>If you don't wish to View or Edit a survey, you can print or delete any individual survey by selecting those buttons next to that survey.</p>
+<br>
+</fieldset>
+<br>
+
+<fieldset>
+<p><span class="helpFormat">Question: </span>How do you Process all the Surveys for a Group (<a href="opengroup.jsp">Open Group Link</a>)?</p>
+<br>
+<p><span class="helpFormat">Answer: </span>Go to the 'Open Group' page, and select the Group at the top that you would like to process surveys for. 
+Then click the "Process Surveys" button near the top right side. It will do all the processing and calculations for that group, such as assign 
+an occupation, process marriages, child support, etc.
+<p>Once a Group has been processed, a "Process" button will appear next to each survey in that Group. You can click this button to view the processed 
+results, showing the assigned occupation, credit score, marriages, etc. for that student. You can also make some edits to their processed results.</p>
+<p>The 'Print All Surveys' button will print all the surveys for that group.</p>
+<br>
+</fieldset>
+<br>
+
+<fieldset>
+<p><span class="helpFormat">Question: </span>How do you Edit or Add Occupations (<a href="occupations.jsp">Edit Occupations Link</a>)?</p>
+<br>
+<p><span class="helpFormat">Answer: </span>When you click the "Edit Occupations" button on the Admin Home page, it will display a table of all the occupations 
+from the database. To edit an existing occupation, click the 'Edit' button at the end of that occupation row, and it 
+will open a new window with that occupation's information where you can edit any field and click 'Submit Change' to save 
+any changes to the database.</p>
+<p>To delete an occupation, click the 'Delete' button for that occupation, and that occupation will be deleted from the database.</p>
+<p>To add a new occupation to the database, click the 'Add Occupation' button at the bottom of the page. It will 
+open a blank form in a new window. Fill in the form with the information for the new occupation. Please note you only have to select the 
+Category, which is similar to the industry of an occupation. Then the occupation's Type and Industry will be filled in automatically for you. Also, when you 
+add the Gross Annual Salary, all the calculations for Taxes, Single vs. Married, etc. will be calculated and filled in for you. Click 'Submit' to save the 
+new occupation to the database.</p>
+<br>
+</fieldset>
+
+
+<br>
+
+
+
+</div><!--END mainArea-->
+
+
+
+</div><!--END Main Area-->
+
+
+<!--FOR STICKY FOOTER-->
+<div id="push"></div>
+
+
+</div><!--END Content Wrapper-->
+
+
+<!--FOOTER OUTSIDE WRAPPER-->
+<div id="footer" class="legal">
+Copyright &copy; 2009-2014 CIS of Marietta/Cobb County
+</div><!--END FOOTER-->
+
+
+</body>
+</html>
