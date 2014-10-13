@@ -25,7 +25,7 @@ public class ProcessCreditScore {
 		SurveysDAO sd = new SurveysDAO();
 		
 		//GPA Categories
-		//double one = 1.499; //under 1.5
+		double one = 1.499; //under 1.5
 		double two = 1.5; //1.5 - 1.9 
 		double three = 2.0; //2.0 - 2.4 
 		double four = 2.5; //2.5 - 2.9 

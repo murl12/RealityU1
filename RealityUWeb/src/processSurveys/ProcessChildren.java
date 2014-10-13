@@ -31,10 +31,8 @@ public class ProcessChildren {
 	private List<Survey> marriedFemalesWithChildrenList = new ArrayList<>();
 
 	private List<Survey> marriedFemalesWithNoChildrenList = new ArrayList<>();
-
-	//private List<Survey> marriedMaleList = new ArrayList<>();
 	
-	//private  Survey spouseSurvey ;
+	private  List<Survey> spouseSurveyList = new ArrayList<>();
 	
 	private double marriedWithChildrenLimitRatio = .5; // target is 50% or .5
 
@@ -70,10 +68,13 @@ public class ProcessChildren {
 					marriedFemalesWithChildrenList.add(survey);
 					
 					// make sure the spouse has the same number of kids
-					//spouseSurvey = spouseSurvey.getSurvey("id", 		
-					//		Integer.toString(survey.getSpouse()));
-					//spouseSurvey.setChildren(survey.getChildren());
-				}
+					if (survey.getChildren().equals("Yes"));
+					spouseSurveyList.add(survey);
+					//else
+						if(survey.getChildren().equals("No"));
+						spouseSurveyList.add(survey);		
+			
+			}
 				
 				// If survey has NO children add to list married with no
 				// children
@@ -129,6 +130,7 @@ public class ProcessChildren {
 			sd.update(survey);
 			marriedFemalesWithChildrenList.remove(survey);
 			marriedFemalesWithNoChildrenList.add(survey);
+			spouseSurveyList.add(survey);
 			
 			
 		} // end while loop
@@ -153,6 +155,7 @@ public class ProcessChildren {
 			survey.setNumChild(randomKids);
 			marriedFemalesWithNoChildrenList.remove(survey);
 			marriedFemalesWithChildrenList.add(survey);
+			spouseSurveyList.add(survey);
 			
 		} // end while loop
 	}// end adjustChildrenUp()
@@ -168,7 +171,7 @@ public class ProcessChildren {
 		System.out.println(pc.marriedFemalesWithChildrenList.size());
 		System.out.println(pc.marriedFemalesWithNoChildrenList.size());
 		System.out.println(pc.marriedFemalesList.size());
-		//System.out.println(pc.marriedMaleList.size());
+		System.out.println(pc.spouseSurveyList.size());
 		
 			
 	}//end main
